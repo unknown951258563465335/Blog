@@ -1,0 +1,22 @@
+{
+    "param":
+    {
+        "local_server" : "True",
+        "local_url" : "mysql+pymysql://root:@localhost/4fun",
+        "public_server" : "mysql://root:@localhost/4fun",
+        "fb_id" : "https://facebook.com/clean_blog",
+        "github_id" : "https://github.com/clean/blog",
+        "twitter_id" : "https://twitter.com/clean_blog",
+        "website_name" : "Develop and Deploy!",
+        "Blog_name" : "Flask!",
+        "Copyright_" : "Your Website 2021",
+        "sender_email" : "djkhankhattak@gmail.com",
+        "sender_password" : "dj951258",
+        "recipients" : "forplayingcoc123@gmail.com",
+        "no_of_posts" : 2,
+        "login_username" : "sarosh@gmail",
+        "login_password" : "lalmuhammad",
+        "upload_location" : "C:\\Users\\pc\\Desktop\\flask\\virtual\\static\\assets\\img"
+    
+    }
+}

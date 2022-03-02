@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}" rel="stylesheet">
+    <title>{{param['website_name']}}</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename = 'assets/favicon.ico') }}" />
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename = 'css/signin.css') }}" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" action = "/dashboard" method="post">
+      <img class="mb-4" src="{{ url_for('static', filename = 'assets/favicon.ico') }}" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" name = "email" class="form-control" placeholder="Email address" required autofocus>
+      <label for="inputPassword"  class="sr-only">Password</label>
+      <input type="password" id="inputPassword" name = "password" class="form-control" placeholder="Password" required>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2021-2022</p>
+    </form>
+  </body>
+</html>

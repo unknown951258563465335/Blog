@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1542137722061-efd1cbdf156c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1>Dashboard</h1>
+                    <h2 class="subheading">This is my dashboard and no one has access to this dashboard yaaa</h2>
+                    <span class="meta">
+                        Posted by
+                        <a href="#!">Start Bootstrap</a>
+                        on August 24, 2021
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <p>Want to add a new post. Fill out the form below to add a new post to your Blog!</p>
+                <div class="my-5">
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+
+                    <form id="contactForm"  action = '/edit/{{post.sno}}' method = 'post'>
+                        <div class="form-floating">
+                            <input class="form-control" id="title" name = 'title' type="text" placeholder="Title" value = "{{post.title}}" data-sb-validations="required" />
+                            <label for="title">Title</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">A Title is required.</div>
+                        </div>
+                        <div class="form-floating">
+                            <input class="form-control" id="email" name = 'slug' type="text" placeholder="slug" value = "{{post.slug}}" data-sb-validations="required,email" />
+                            <label for="slug">slug</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An slug is required.</div>
+                        </div>
+                        <div class="form-floating">
+                            <input class="form-control" id="image" name = 'image' type="text" placeholder="image" value = "{{post.img}}" data-sb-validations="required" />
+                            <label for="image">Image</label>
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A image is required.</div>
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control" id="message" name = 'content' placeholder="Enter your content here..." value = "{{post.content}}" style="height: 12rem" data-sb-validations="required">{{post.content}}</textarea>
+                            <label for="message">Content</label>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                        </div>
+                        <br />
+                        <!-- Submit Button-->
+                        <button class = " btn btn-primary text-uppercase" id="submitButton" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+
+
+{% endblock %}
