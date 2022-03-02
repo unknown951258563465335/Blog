@@ -1,2 +1,1 @@
-worker: python using_flask.py
-heroku ps:scale web=1
+web: gunicorn using_flask.py
